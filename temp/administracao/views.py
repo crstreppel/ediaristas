@@ -18,3 +18,11 @@ def cadastrar_servico(request):
 def listar_servicos(request):
     servicos = Servico.objects.all()
     return render(request, 'servicos/lista_servicos.html', {'servicos': servicos})
+
+def editar_servico(request, id):
+    servico = Servico.objects.get(id=id)
+    form_servico = ServicoForm(request.POST or None, instance=servico)
+    if form_servico.is_valid():
+        form_servico.save()
+        return redirect('listar_servicos')
+    return render(request, 'servicos/form_servicos.html', {'form_servico':form_servico})
