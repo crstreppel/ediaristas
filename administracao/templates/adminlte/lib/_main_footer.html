@@ -1,0 +1,12 @@
+{% extends 'adminlte/lib/_main_footer.html' %}
+
+{% block footer_left %}
+{% block legal %}
+<strong>Copyright &copy; {% now "Y" %}{% if not site %}.{% endif %}
+    {% if site %}
+    <a href="http://{{ site.domain }}">{{ site.name }}</a>
+    {% endif %}
+</strong> All rights
+reserved. By CRStreppel tecnologia !
+{% endblock %}
+{% endblock %}

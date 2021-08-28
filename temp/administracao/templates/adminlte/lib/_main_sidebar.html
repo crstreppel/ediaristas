@@ -1,0 +1,29 @@
+{%  extends 'adminlte/lib/_main_sidebar.html' %}
+
+{% block logo_text %}
+<span class="brand-text font-weight-light">e-diaristas</span>
+{% endblock logo_text %}
+
+{% block nav_heading %}lINKS DE NAVEGACAO{% endblock %}
+
+{% block nav_links %}
+<li class="nav-item">
+    <a href="{% url 'listar_servicos' %}" class="nav-link active">
+        <i class="nav-icon fas fa-cogs"></i>
+        <p>Servicos</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link active">
+        <i class="nav-icon far fa-user"></i>
+        <p>Usuários</p>
+    </a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link active">
+        <i class="nav-icon fas fa-clock"></i>
+        <p>Diárias</p>
+    </a>
+</li>
+</li>
+{% endblock nav_links %}
