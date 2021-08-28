@@ -25,4 +25,4 @@ def editar_servico(request, id):
     if form_servico.is_valid():
         form_servico.save()
         return redirect('listar_servicos')
-    return render(request, 'servicos/form_servicos.html', {'form_servico':form_servico})
+    return render(request, 'servicos/form_servicos.html', {'form_servicos':form_servico})
