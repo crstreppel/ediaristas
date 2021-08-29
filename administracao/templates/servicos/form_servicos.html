@@ -9,13 +9,13 @@
 {% block content %}
 <div class="card card-primary">
     <div class="card-header">
-        <div class="card-title"> Cadastro de Servicos</div>
+        <div class="card-title">Cadastro de Serviço</div>
     </div>
     <div class="card-body">
         <form method="POST">
             {% csrf_token %}
             <!-- {{form_servico.as_p}} -->
-            {% bootstrap_form form_servico %}
+            {%bootstrap_form form_servico%}
             <button class="btn btn-primary" type="submit reset">Salvar</button>
         </form>
     </div>
