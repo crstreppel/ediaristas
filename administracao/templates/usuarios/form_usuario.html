@@ -1,9 +1,18 @@
 {% extends 'base.html' %}
+{% load bootstrap4%}
 
 {% block content %}
-<form method="POST">
-    {% csrf_token %}
-    {{form_usuario.as_p}}
-    <input type="submit" class="btn btn-primary" value="Salvar">
-</form>
+<div class="card card-primary">
+    <div class="card-header">
+        <div class="card-title">Cadastro de Serviço</div>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {% csrf_token %}
+            <!-- {{form_usuario.as_p}} -->
+            {% bootstrap_form form_usuario %}
+            <input type="submit" class="btn btn-primary" value="Salvar">
+        </form>
+    </div>
+</div>
 {% endblock content %}
