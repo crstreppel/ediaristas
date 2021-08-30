@@ -16,6 +16,7 @@ Listagem de Usuarios Administrativos
             <thead>
                 <tr>
                     <th>Nome</th>
+                    <th>Email</th>
                     <th>Açoes</th>
                 </tr>
             </thead>
@@ -23,6 +24,7 @@ Listagem de Usuarios Administrativos
                 {% for usuario in usuarios %}
                 <tr>
                     <td>{{usuario.username}}</td>
+                    <td>{{usuario.email}}</td>
 
                     <td>
                         <a href="#"> Editar</a>
