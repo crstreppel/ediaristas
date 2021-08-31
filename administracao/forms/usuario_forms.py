@@ -16,9 +16,9 @@ class CadastroUsuarioForm(UserCreationForm):
         return user
 
 class EditarUsuarioForm(UserChangeForm):
-    # password = None
+    password = None
 
     class Meta:
         model = get_user_model()
         fields = ['username', 'first_name', 'email']
-        # fields = '__all__'
+        
